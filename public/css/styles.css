@@ -1,0 +1,610 @@
+/* body {
+
+    background-color: #f9f9f9;
+    margin: 0 auto;
+} */
+
+/* =====HEADER===== */
+
+header a {
+    color: gray;
+}
+
+header nav {
+    justify-content: flex-end;
+}
+.nav {
+    align-items: center;
+}
+
+#logo{
+    height: 70px;
+}
+
+.container-fluid {
+    margin-top: 0;
+}
+
+/* =====HOME===== */
+
+.carousel-caption {
+    width: 800px;
+    z-index: 10;
+    color: #fff;
+    text-align: left;
+    top: 50%;
+    left: 15%;
+    bottom: auto;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    font-size: 40px;
+}
+
+.bloco-cards {
+    background-image: url('../images/slide3-1-1440x585.jpg');
+    width: 100%;
+    padding: 50px 0;
+}
+
+.card-deck {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+/* .form-group {
+    max-width: 330px;
+    padding: 10px;
+    margin: 0 auto;
+    color: gray;
+} */
+
+.divisoria {
+    /* background-color: #282828; */
+    height: 50px;
+}
+
+.divisoria2 {
+    background-color: #fff;
+    height: 100px;
+    /*margin-top: 100px;*/
+    color: darkgray;
+    font-size: 12px;
+    text-align: center;  
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  
+
+}
+.divisoria2 a{
+    /* text-decoration: none; */
+    color: gray;
+    
+}
+
+.divisoria2 a:hover{
+    color: gray;
+}
+
+.fundo-icones {
+    height: 200px;
+
+}
+
+.icones-topo {
+    height: 100px;
+
+}
+
+.carousel-caption .btn.btn-primary {
+    background-color: #46c965;
+    border-radius: 200px;
+    font-size: 18px;
+    border: #46c965;
+}
+
+.carousel-caption .btn.btn-secondary {
+    background-color: white;
+    border-radius: 200px;
+    font-size: 18px;
+    color: grey;
+    border: #46c965;
+}
+
+div.col-md-4.mb-4 p {
+    text-align: start;
+}
+
+/* =====LOGIN===== */
+
+#login{
+background-image: url('../images/floresta.jpg');
+background-color:  #f9f9f9;
+/* background-repeat: no-repeat; */
+object-fit: cover;
+}
+
+.boxLogin{
+    /* max-width: 360px; */
+    height: 400px;
+    margin: 0 auto;
+    margin-top: 90px;
+    margin-bottom: 90px;
+    color: gray;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    border: 1px solid;
+    border-color: grey;
+
+}
+
+.campos-form{
+    max-width: 330px;
+    padding: 10px;
+    margin: 0 auto;
+    color: gray;
+}
+
+.campos-form input{
+    border-radius: 200px;
+}
+
+.boxLogin form .form-check{
+    max-width: 330px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.btn.btn-success.btn_entrar{
+    border-radius: 40px !important;
+}
+    
+
+
+/* =====ADM===== */
+#adm p{
+
+    margin: 0px;
+}
+
+#adm h4{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px;
+    color: #fff;
+}
+
+
+#adm .dashboard{
+    height: 100%;
+}
+/* SIDEBAR DASHBOARD */
+
+#adm button{
+    text-decoration: none;
+    color: black;
+}
+.adm-sidebar .sidebar-links a{
+    
+    background-color: rgba(0,0,0,.03);    
+}
+.adm-sidebar .sidebar-links a:first-child{
+
+    background-color: #65bf6c;
+}
+
+.adm-sidebar .sidebar-links .card-header{
+
+    background-color: #65bf6c !important;
+}
+
+
+.adm-sidebar .sidebar-links a:hover{
+
+    background-color: #a3faaac2 !important;
+    
+}
+
+/* INFOS DASHBOARD */
+.adm-infos .card-dashboard > .card-header{
+    background-color: #65bf6c;
+}
+
+
+.adm-infos .card-dashboard .card{
+
+    background-color:  #fff;
+}
+
+.adm-infos .card-entidade:hover{
+    background-color: #a3faaac2;
+}
+
+.adm-infos .card-body hr{
+    margin: 8px 0;
+    padding: 5px 0;
+}
+.adm-infos .novos-cadastros li{
+    list-style: none;
+}
+.adm-infos .novos-cadastros a{
+    text-decoration: none;
+}
+
+
+/* =====CADASTRO PRODUTOS===== */
+
+#cadastro_produtos{
+    background-image: url(../images/floresta.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 15px;
+}
+
+.corpor{
+    /* margin-top: 50px; */
+    display: flex;
+    flex-direction: row;
+    background-color: #f9f9f9;
+    padding: 15px;
+}
+
+.dados{
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    border-radius: 25px;
+}
+
+.enviar{
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.CB div{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    padding-top: 10px;
+}
+
+.CB div input{
+    margin-right: 5px;
+}
+
+.campo-imagem{
+    margin: 0;
+}
+
+.img-produto{
+    width: 100%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.colocar-img{
+    margin: auto;
+}
+
+@media (max-width: 960px){
+    .corpor{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+
+/* =====DOADOR===== */
+#perfil_doador{
+    background-image: url('../images/floresta.jpg');
+    background-color:  #f9f9f9;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    }
+#perfil{
+    background-color: aliceblue;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#corpo{
+    background-color: white;
+}
+
+.dados-doador{
+    margin-top: 25px;
+}
+
+.dados-doador div{
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: row;
+}
+
+#produtos {
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+}
+
+.produto-registrado{
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    padding: 10px;
+    background-color:#bbdfb5;
+}
+
+.dados-produto{
+    display: flex;
+    flex-direction: column;
+}
+
+.foto-produto{
+    width: 100%;
+}
+
+.img-prod{
+    width: 30%;
+    margin-right: 15px;
+}
+
+.foto-perfil{
+    width: 100%;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.add-produto{
+    margin-bottom: 15px;
+}
+
+.adicionar_prod{
+    background-color: #46c965;
+    border-radius: 50px;
+}
+
+.dados-doador div a{
+    word-wrap: break-word;
+    color: blue;
+    display: flex;
+    align-items: center;
+}
+
+.dados-doador div span{
+    padding-right: 5px;
+}
+
+@media (max-width: 1200px){
+    .foto-perfil{
+        width: 50%;
+        text-align: center;
+    }
+
+    #perfil{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .foto-perfil{
+        text-align: center;
+    }
+
+    #perfil div{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .doador{
+        text-align: center;
+    }
+}
+
+@media (max-width: 960px){
+    #corpo{
+        display: flex;
+        flex-direction: column;
+        margin-top: 25px;
+    } 
+
+    #perfil{
+        background-color: aliceblue;
+        width: 100%;
+        padding: 2%;
+    }
+
+    #produtos {
+        width: 100%;
+    }
+    
+    .produto-registrado{
+        flex-direction: column;
+    }
+
+    .dados-doador{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .doador{
+        text-align: center;
+    }
+} 
+
+
+/* =====FOOTER===== */
+
+footer {
+    background-color: #282828 !important;
+}
+
+footer a {
+
+    text-decoration: none;
+    font-size: 13px;
+}
+
+#footer-infos div {
+    text-align: center;
+    color: black;
+}
+
+#footer-infos h5 {
+    font-family: 'Montserrat', sans-serif;
+    color: #f0f0f0;
+}
+
+/* FOOTER ESQUERDO */
+.footer-esquerdo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-logo img {
+    width: 150px;
+
+}
+
+.footer-logo>p {
+    color: #f0f0f0;
+
+}
+
+.links-esquerdo a {
+    text-decoration: none;
+    color: #f0f0f0;
+    padding: 15px 15px 0 5px;
+    line-height: 35px;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.links-esquerdo a:hover {
+    color: #6b655e;
+
+}
+
+/* FOOTER CENTRAL */
+
+.campanhas ul {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.campanhas ul li {
+    text-align: center;
+
+}
+
+.campanhas a {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 15px;
+    text-decoration: none;
+    color: #f0f0f0;
+    list-style-type: none;
+    padding-left: 0px;
+    text-align: center;
+
+}
+
+.campanhas a:hover {
+    color: #6b655e;
+
+}
+
+/* FOOTER REDES SOCIAIS */
+
+#botoes {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+
+}
+
+#botoes a {
+    padding: 10px 20px 0px;
+
+}
+
+
+#botoes a i {
+    font-size: 40px;
+    color: #11eb5a;
+
+}
+
+/* FOOTER INFERIOR CONTATOS */
+
+#footer-contatos {
+    justify-content: space-around;
+    padding-top: 30px;
+
+}
+
+#footer-contatos a {
+    text-decoration: none;
+    color: #6b655e;
+}
+
+#footer-contatos a i {
+    font-size: 45px;
+    color: #11eb5a;
+}
+
+.btn-contatos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+}
+
+.btn-contatos a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60px;
+    height: 55px;
+    margin-top: 10px 0px;
+}
+
+#copyright {
+    display: flex;
+    justify-content: space-between;
+    color: #f0f0f0;
+    border-top: 1px solid #6b655e;
+}
+
+#copyright div,
+span {
+    padding: 7px;
+}
+
+#copyright div a {
+    padding: 0 6px;
+    color: #04b95a;
+    text-decoration: none;
+}
+
+#cadastro_doador{
+    display: none;
+}
+
+form{
+    margin-bottom: 15px;
+}
