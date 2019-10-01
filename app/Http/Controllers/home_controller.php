@@ -33,4 +33,12 @@ class home_controller extends Controller
     public function recepitor(){
         return view('recepitor');
     }
+
+    public function perfilreceptor(){
+        return view('perfil-recepitor');
+    }
+
+    public function pedidoproduto(){
+        return view('pedido-produto');
+    }
 }

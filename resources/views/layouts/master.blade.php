@@ -32,10 +32,10 @@
             <nav class="col-sm-12 col-md-10 d-flex">
                 <ul class="nav justify-content-center">
                     <li class="nav-item">
-                        <a class="nav-link" href="doador.html">Doadores</a>
+                        <a class="nav-link" href="doador.blade.php">Doadores</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="instituicoes.html">Instituições</a>
+                        <a class="nav-link" href="instituicoes..blade.php">Instituições</a>
                     </li>
                     </li>
                     <li class="nav-item">

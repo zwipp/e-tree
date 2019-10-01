@@ -19,3 +19,5 @@ Route::get('/instituicao', 'home_controller@instituicao');
 Route::get('/login', 'home_controller@login');
 Route::get('/perfil', 'home_controller@perfil');
 Route::get('/recepitor', 'home_controller@recepitor');
+Route::get('/cadastro/pedido', 'home_controller@pedidoproduto');
+Route::get('/perfil/receptor', 'home_controller@perfilreceptor');
