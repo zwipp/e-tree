@@ -63,38 +63,44 @@
     </div>
 
     <div class="row col-xl-8 mx-auto" id="cadastro_doador" style="text-align: center;">
-        <form>
+        <form action="/criar/usuario" method="post" enctype="multipart/form-data">
+            @csrf
+            <input type="hidden" name="tipo" value="3">
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input type="text" class="form-control" id="nome" placeholder="nome" name="nome">
+            </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Email</label>
                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                    placeholder="email">
+                    placeholder="email" name="email">
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Senha</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha" name="senha">
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Confirmar senha</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirmar senha">
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirmar senha" name="confirm-senha">
             </div>
             <div class="form-row">
                 <div class="col-md-6 mb-3">
                     <label for="validationTooltip03">Cidade</label>
-                    <input type="text" class="form-control" id="validationTooltip03" placeholder="Cidade" required>
+                    <input type="text" class="form-control" id="validationTooltip03" placeholder="Cidade" required name="cidade">
                     <div class="invalid-tooltip">
                         Please provide a valid city.
                     </div>
                 </div>
                 <div class="col-md-3 mb-3">
                     <label for="validationTooltip04">Estado</label>
-                    <input type="text" class="form-control" id="validationTooltip04" placeholder="Estado" required>
+                    <input type="text" class="form-control" id="validationTooltip04" placeholder="Estado" required name="estado">
                     <div class="invalid-tooltip">
                         Please provide a valid state.
                     </div>
                 </div>
                 <div class="col-md-3 mb-3">
                     <label for="validationTooltip05">CEP</label>
-                    <input type="text" class="form-control" id="validationTooltip05" placeholder="CEP" required>
+                    <input type="text" class="form-control" id="validationTooltip05" placeholder="CEP" required name="cep">
                     <div class="invalid-tooltip">
                         Please provide a valid zip.
                     </div>
@@ -103,12 +109,17 @@
             <div class="form-row">
                 <div class="col">
                     <label for="validationTooltip05">CPF</label>
-                    <input type="text" class="form-control" placeholder="CPF">
+                    <input type="text" class="form-control" placeholder="CPF" name="cpf">
                 </div>
                 <div class="col">
                     <label for="validationTooltip05">Telefone</label>
-                    <input type="text" class="form-control" placeholder="Telefone">
+                    <input type="text" class="form-control" placeholder="Telefone" name="telefone">
                 </div>
+            </div>
+            <div class="form-group">
+                <label for="foto">Foto</label>
+                <input type="file" class="form-control" id="foto"
+                    placeholder="foto" name="foto">
             </div>
             <br>
             <button type="submit" class="btn btn-primary col-xl-8">Submit</button>

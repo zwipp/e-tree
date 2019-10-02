@@ -21,3 +21,5 @@ Route::get('/perfil', 'home_controller@perfil');
 Route::get('/recepitor', 'home_controller@recepitor');
 Route::get('/cadastro/pedido', 'home_controller@pedidoproduto');
 Route::get('/perfil/receptor', 'home_controller@perfilreceptor');
+
+Route::post('/criar/usuario', 'usuario_controller@criar_usuario');

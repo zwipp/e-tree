@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRecepitorTable extends Migration
+class CreateUsuarios extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,18 @@ class CreateRecepitorTable extends Migration
      */
     public function up()
     {
-        Schema::create('recepitor', function (Blueprint $table) {
+        Schema::create('usuarios', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('nome');
+            $table->bigInteger('tipo');
             $table->string('email')->unique();
             $table->string('senha');
             $table->string('cidade');
             $table->string('estado');
-            $table->bigInteger('CEP');
-            $table->bigInteger('CPF')->unique();
+            $table->bigInteger('cep');
+            $table->bigInteger('cpf')->unique();
             $table->bigInteger('telefone')->unique();
+            $table->string('foto')->default('padrao.png');
             $table->timestamps();
         });
     }
@@ -33,6 +36,6 @@ class CreateRecepitorTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('recepitor');
+        Schema::dropIfExists('usuarios');
     }
 }

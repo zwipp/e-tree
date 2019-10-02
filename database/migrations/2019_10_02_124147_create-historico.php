@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateHistoricoTable extends Migration
+class CreateHistorico extends Migration
 {
     /**
      * Run the migrations.
@@ -15,15 +15,11 @@ class CreateHistoricoTable extends Migration
     {
         Schema::create('historico', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->enum('nome', ['notbook', 'desktop','monitor']);
-            $table->bigInteger('qnt');
-            $table->enum('estado', ['novo', 'bom','analise']);
-            $table->unsignedBigInteger('id_recepitor');
-            $table->unsignedBigInteger('id_produto');
-            $table->foreign('id_recepitor')->references('id')->on('recepitor');
-            $table->foreign('id_produto')->references('id')->on('produtos');
+            $table->unsignedBigInteger('id_produtos');
+            $table->foreign('id_produtos')->references('id')->on('produtos');
+            $table->unsignedBigInteger('id_pedidos');
+            $table->foreign('id_pedidos')->references('id')->on('pedidos');
             $table->string('foto');
-
             $table->timestamps();
         });
     }
