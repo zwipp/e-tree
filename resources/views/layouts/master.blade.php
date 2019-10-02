@@ -25,21 +25,21 @@
         <!-- LOGO -->
         <div class="row">
             <div class="col-sm-12 col-md-2 text-center">
-                <a class="navbar-brand" href="home.html">
-                    <img id="logo" src=" {{url('images/logo_etree_v02.png')}} " alt="logo etree">
+                <a class="navbar-brand" href="{{url('/home')}}">
+                    <img id="logo" src=" {{url('/images/logo_etree_v02.png')}} " alt="logo etree">
                 </a>
             </div>
             <nav class="col-sm-12 col-md-10 d-flex">
                 <ul class="nav justify-content-center">
                     <li class="nav-item">
-                        <a class="nav-link" href="doador.blade.php">Doadores</a>
+                        <a class="nav-link" href="{{url('/doador')}}">Doadores</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="instituicoes..blade.php">Instituições</a>
+                        <a class="nav-link" href="{{url('/instituicoes')}}">Instituições</a>
                     </li>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="login.html">Login</a>
+                        <a class="nav-link" href="{{url('/login')}}">Login</a>
                     </li>
                 </ul>
             </nav>
