@@ -50,7 +50,7 @@ class Usuario_controller extends Controller
         if(request('tipo') == 2){
             return redirect('/perfil');
         }
-        return redirect('/perfil/recepitor');
+        return redirect('/perfil/receptor');
         
         
 
