@@ -69,7 +69,7 @@
             <div class="form-group">
                 <label for="nome">Nome</label>
                 <input type="text" class="form-control" id="nome" placeholder="nome" name="nome">
-            </div>
+            </div>  
             <div class="form-group">
                 <label for="exampleInputEmail1">Email</label>
                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
