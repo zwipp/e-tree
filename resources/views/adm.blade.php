@@ -87,42 +87,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card">
-                                <div class="card-entidade card-header" id="headingThreee">
-                                    <h2 class="mb-0">
-                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                                            data-target="#collapseThreee" aria-expanded="false"
-                                            aria-controls="collapseThreee">
-                                            <p>Voluntários</p>
-                                        </button>
-                                        <p class="btn btn-outline-success btn-rounded">5</p>
-
-                                    </h2>
-                                </div>
-                                <div id="collapseThreee" class="collapse" aria-labelledby="headingThree"
-                                    data-parent="#accordionExample">
-                                    <div class="card-body">
-                                        <ul class="novos-cadastros">
-                                            <li>
-                                                <a href="">Carlos</a>
-                                            </li>
-                                            <hr>
-                                            <li>
-                                                <a href="">Carlos</a>
-                                            </li>
-                                            <hr>
-                                            <li>
-                                                <a href="">Carlos</a>
-                                            </li>
-                                            <hr>
-                                            <li>
-                                                <a href="">Carlos</a>
-                                            </li>
-                                            <hr>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                     <div class="accordion pt-3" id="accordionExample">
