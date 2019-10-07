@@ -34,29 +34,19 @@
                                             aria-controls="collapseOnee">
                                             <p>Doadores</p>
                                         </button>
-                                        <p class="btn btn-outline-success">5</p>
+                                    <p class="btn btn-outline-success">{{count($usuarios)}}</p>
                                     </h2>
                                 </div>
                                 <div id="collapseOnee" class="collapse" aria-labelledby="headingOne"
                                     data-parent="#accordionExample">
                                     <div class="card-body">
                                         <ul class="novos-cadastros">
-                                            <li>
-                                                <a href="">Carlos</a>
+                                            @foreach ($usuarios as $usuario)                                              
+                                            <li class="liusuario">
+                                                <a href="">{{$usuario->nome}}</a>
                                             </li>
                                             <hr>
-                                            <li>
-                                                <a href="">Carlos</a>
-                                            </li>
-                                            <hr>
-                                            <li>
-                                                <a href="">Carlos</a>
-                                            </li>
-                                            <hr>
-                                            <li>
-                                                <a href="">Carlos</a>
-                                            </li>
-                                            <hr>
+                                            @endforeach
                                         </ul>
                                     </div>
                                 </div>

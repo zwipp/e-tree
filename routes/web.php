@@ -11,7 +11,8 @@
 |
 */
 
-Route::get('/adm', 'adm_controller@index');
+// Route::get('/adm', 'adm_controller@index');
+Route::get('/adm', 'adm_controller@visualizarUsuario');
 Route::get('/cadastro/produto', 'home_controller@cadastroProduto');
 Route::get('/doador', 'home_controller@doador');
 Route::get('/home', 'home_controller@home');
