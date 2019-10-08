@@ -19,4 +19,12 @@ class Adm_controller extends Controller
 
         return view('adm',compact('usuarios'));
     }
+    // public function delete($id){
+
+    //     $usuario = Usuario::find($id);
+
+    //     $usuario->delete();
+
+    //     return redirect('/adm');
+    // }
 }
