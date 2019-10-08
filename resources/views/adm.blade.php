@@ -19,7 +19,7 @@
                         <a href="" class="list-group-item list-group-item-action bg-light">Link</a>
                     </div>
                 </div>
-                <!-- Painel -->
+                <!-- PAINEL -->
                 <div class="adm-infos col-md-9 py-3">
                     <div class="accordion" id="accordionExample">
                         <div class="card-dashboard">
@@ -45,6 +45,7 @@
                                             @if ($usuario->tipo === 3)                                                
                                             <li class="">
                                                 <a href="">{{$usuario->nome}}</a>
+                                                <p>{{$usuario->email}}</p>
                                             </li>
                                             <hr>
                                             @endif                                            
@@ -62,22 +63,36 @@
                                             <p>Instituições</p>
                                         </button>
                                     <p class="btn btn-outline-success">{{count($usuarios)}}</p>
-
                                     </h2>
                                 </div>
                                 <div id="collapseTwoo" class="collapse" aria-labelledby="headingTwo"
                                     data-parent="#accordionExample">
                                     <div class="card-body">
-                                        <ul class="novos-cadastros">
-                                            @foreach ($usuarios as $usuario)  
-                                            @if ($usuario->tipo === 2)
-                                                <li class="">
-                                                    <a href="">{{$usuario->nome}}</a>
-                                                </li>
-                                                <hr>                                                                                            
-                                            @endif                                           
-                                            @endforeach
-                                        </ul>
+                                        @if ($usuario->tipo === 2)
+                                            <table class="table table-striped novo-usuario">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">Usuário</th>
+                                                        <th scope="col">email</th>
+                                                        <th scope="col">ações</th>
+                                                    </tr>
+                                                </thead>                                                
+                                                <tbody>
+                                                    @foreach ($usuarios as $usuario)
+                                                    <tr>
+                                                        <td><a href="/perfil/receptor">{{$usuario->nome}}</a></td>
+                                                        <td>{{$usuario->email}}</td>
+                                                        <td>
+                                                        {{-- <form action="/perfil/receptor/{id}" method="post">
+                                                            @method('delete')
+                                                            @csrf
+                                                            <button type="submit" class="btn badge badge-danger">Remover</button>
+                                                        </td> --}}
+                                                    </tr>
+                                                    @endforeach
+                                                </tbody>
+                                            </table>
+                                        @endif                                           
                                     </div>
                                 </div>
                             </div>
