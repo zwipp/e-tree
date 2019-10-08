@@ -41,11 +41,13 @@
                                     data-parent="#accordionExample">
                                     <div class="card-body">
                                         <ul class="novos-cadastros">
-                                            @foreach ($usuarios as $usuario)                                              
-                                            <li class="liusuario">
+                                            @foreach ($usuarios as $usuario)  
+                                            @if ($usuario->tipo === 3)                                                
+                                            <li class="">
                                                 <a href="">{{$usuario->nome}}</a>
                                             </li>
                                             <hr>
+                                            @endif                                            
                                             @endforeach
                                         </ul>
                                     </div>
@@ -59,7 +61,7 @@
                                             aria-controls="collapseTwoo">
                                             <p>Instituições</p>
                                         </button>
-                                        <p class="btn btn-outline-success">5</p>
+                                    <p class="btn btn-outline-success">{{count($usuarios)}}</p>
 
                                     </h2>
                                 </div>
@@ -67,22 +69,14 @@
                                     data-parent="#accordionExample">
                                     <div class="card-body">
                                         <ul class="novos-cadastros">
-                                            <li>
-                                                <a href="">Digital House</a>
-                                            </li>
-                                            <hr>
-                                            <li>
-                                                <a href="">IBM</a>
-                                            </li>
-                                            <hr>
-                                            <li>
-                                                <a href="">Microsoft</a>
-                                            </li>
-                                            <hr>
-                                            <li>
-                                                <a href="">Apple</a>
-                                            </li>
-                                            <hr>
+                                            @foreach ($usuarios as $usuario)  
+                                            @if ($usuario->tipo === 2)
+                                                <li class="">
+                                                    <a href="">{{$usuario->nome}}</a>
+                                                </li>
+                                                <hr>                                                                                            
+                                            @endif                                           
+                                            @endforeach
                                         </ul>
                                     </div>
                                 </div>
@@ -92,7 +86,7 @@
                     <div class="accordion pt-3" id="accordionExample">
                         <div class="card-dashboard">
                             <div class="card-header">
-                                <h4>Possíveis Matches</h4>
+                                <h4>Equipamentos disponíveis</h4>
                             </div>
                             <div class="card">
                                 <div class="card-entidade card-header" id="headingOne">
