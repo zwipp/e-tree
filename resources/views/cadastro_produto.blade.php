@@ -3,10 +3,12 @@
 
     <section id="cadastro_produtos" class="container-fluid pb-3">
 
-        <form class="col-9 mx-auto py-2" action="">
+        <form class="col-9 mx-auto py-2" action="/criar/produto" method="POST" enctype="multipart/form-data">
+            @csrf
             <div class="corpor mt-4">
                 <div class="row col-xl-6 mx-auto dados">
                     <div>
+                        <input type="hidden" name="id_usuario" value="2">
                         <fieldset class="CB">
                             <legend>O que você irá doar? </legend>
                             <div>
@@ -22,10 +24,16 @@
                                 <label for="music">Monitor</label>
                             </div>
                         </fieldset>
+                        @error('nome')
+                            <span class="text-danger">{{$message}} </span>
+                        @enderror
                     </div>
                     <div class="pt-2">
                         <label for="quantidade">Quantidade:</label>
-                        <input type="number" id="quantidade" class="form-goup form-control">
+                        <input type="number" id="quantidade" class="form-goup form-control" name="qnt">
+                        @error('qnt')
+                            <span class="text-danger">{{$message}} </span>
+                        @enderror
                     </div>
                     <div class="pt-3">
                         <fieldset class="CB">
@@ -43,6 +51,9 @@
                                 <label for="music"> Precisa de uma análise </label>
                             </div>
                         </fieldset>
+                        @error('estado')
+                            <span class="text-danger">{{$message}} </span>
+                        @enderror
                     </div>
                 </div>
 
@@ -56,14 +67,14 @@
                         </div>
                         <div class="custom-file ">
                             <input type="file" class="custom-file-input" id="inputGroupFile01"
-                                aria-describedby="inputGroupFileAddon01">
+                                aria-describedby="inputGroupFileAddon01" name="foto">
                             <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="enviar mb-2">
-                <button type="button" class="btn btn-success adicionar_prod">Enviar</button>
+                <button type="submit" class="btn btn-success adicionar_prod">Enviar</button>
             </div>
         </form>
     </section>
