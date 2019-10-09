@@ -8,39 +8,31 @@
     <div class="container" id="cadastro_produtos">
         <div class="row col-xl-12 mx-auto" id="corpo">
             <div id="perfil" class="col-xl-4 mx-auto">
-
                 <div class="doador">
                     <img src="images/pose-para-fotos-de-perfil.jpg" alt="" class="foto-perfil">
                 </div>
-
                 <div class="dados-doador">
 
                     <div>
-                        <span>Nome: </span>
-                        <span>Sofia</span>
+                        <span>Nome:</span>
+                        <span>{{$usuario->nome}}</span>
                     </div>
-
-                    <div>
-                        <span>Empresa: </span>
-                        <span>Terabyte</span>
-                    </div>
-
                     <div>
                         <span>Email: </span>
-                        <a href="">fernandodias@hotmail.com</a>
+                        <a href="mailto:{{$usuario->email}}">{{$usuario->email}}</a>
                     </div>
 
                     <div>
                         <span>telefone: </span>
-                        <a href="">(19) 985563685</a>
+                        <a href="">{{$usuario->telefone}}</a>
                     </div>
                     <div>
-                        <span>Local: </span>
-                        <a href="">R. Zézin N:41 asdasdasdasdas</a>
+                        <span>CPF: </span>
+                        <a href="">{{$usuario->cpf}}</a>
                     </div>
                     <div>
                         <span>CEP: </span>
-                        <a href="">456789123</a>
+                        <a href="">{{$usuario->cep}}</a>
                     </div>
                 </div>
             </div>

@@ -11,11 +11,11 @@
 |
 */
 
-// Route::get('/adm', 'adm_controller@index');
 Route::get('/adm', 'adm_controller@visualizarUsuarios');
 Route::get('/perfil/receptor/{id}', 'adm_controller@visualizarUsuarios');
 Route::get('/perfil/doador/{id}', 'adm_controller@visualizarUsuarios');
 Route::delete('/perfil/{id}', 'adm_controller@delete');
+
 Route::get('/cadastro/produto', 'home_controller@cadastroProduto');
 Route::get('/doador', 'home_controller@doador');
 Route::get('/home', 'home_controller@home');

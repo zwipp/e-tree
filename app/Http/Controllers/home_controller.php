@@ -31,6 +31,8 @@ class home_controller extends Controller
 
         $usuario = Usuario::find($id);
 
+        if(!$usuario) return redirect('/adm');
+
         
         return view('perfil-doar',compact('usuario'));
     }
