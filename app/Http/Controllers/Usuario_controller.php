@@ -36,23 +36,21 @@ class Usuario_controller extends Controller
         $usuario->telefone=request('telefone');
 
         if (!empty(request('foto'))) {
-            $caminhoAbsoluto = public_path() . '/storage/uploads';
             $nomeArquivo = time() . '.' . request('foto')->extension();
             
             
-            request('foto')->move($caminhoAbsoluto, $nomeArquivo);
+            request('foto')->storeAs('\uploads', $nomeArquivo);
             $usuario->foto = $nomeArquivo;
         }
 
         $usuario->save();
 
+        if($usuario->tipo == 2){
 
-        if(request('tipo') == 2){
-            return redirect('/perfil');
+            return redirect('/perfil/' . $usuario->id);
         }
-        return redirect('/perfil/receptor');
         
-        
+        return redirect('/perfil/receptor/' . $usuario->id);
 
 
     }
