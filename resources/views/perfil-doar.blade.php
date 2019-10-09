@@ -9,7 +9,7 @@
         <div class="row col-xl-12 mx-auto" id="corpo">
             <div id="perfil" class="col-xl-4 mx-auto">
                 <div class="doador">
-                    <img src="images/pose-para-fotos-de-perfil.jpg" alt="" class="foto-perfil">
+                    <img src="{{url('/storage/uploads/'.$usuario->foto)}}" alt="" class="foto-perfil">
                 </div>
                 <div class="dados-doador">
 
@@ -19,20 +19,20 @@
                     </div>
                     <div>
                         <span>Email: </span>
-                        <a href="mailto:{{$usuario->email}}">{{$usuario->email}}</a>
+                        <span>{{$usuario->email}}</span>
                     </div>
 
                     <div>
-                        <span>telefone: </span>
-                        <a href="">{{$usuario->telefone}}</a>
+                        <span>Telefone: </span>
+                        <span>{{$usuario->telefone}}</span>
                     </div>
                     <div>
                         <span>CPF: </span>
-                        <a href="">{{$usuario->cpf}}</a>
+                        <span>{{$usuario->cpf}}</span>
                     </div>
                     <div>
                         <span>CEP: </span>
-                        <a href="">{{$usuario->cep}}</a>
+                        <span>{{$usuario->cep}}</span>
                     </div>
                 </div>
             </div>
@@ -40,110 +40,38 @@
             <div id="produtos" class="col-xl-8 mx-auto">
 
                 <div class="add-produto">
-                    <a href="/cadastro_produto.html"><button type="button"
-                            class="btn btn-success adicionar_prod">Adicionar mais um produto +</button></a>
+                    <a href="/cadastro/produto">
+                        <button type="button"class="btn btn-success adicionar_prod">Adicionar mais um produto +</button>
+                    </a>
 
                 </div>
 
+               
+                @foreach ($usuario->produtos as $p)
+                    
                 <div class="produto-registrado">
                     <div class="img-prod">
-                        <a href=""><img src="images/gabinete.jpg" alt="" class="foto-produto"></a>
+                    <a href=""><img src="{{url('/storage/uploads/'.$p->foto)}}" alt="" class="foto-produto"></a>
                     </div>
 
                     <div class="dados-produto">
 
                         <div>
                             <span>Produto:</span>
-                            <span>Gabinete</span>
+                            <span>{{$p->nome}}</span>
                         </div>
                         <div>
                             <span>Quantidade:</span>
-                            <span>5</span>
+                            <span>{{$p->qnt}}</span>
                         </div>
-
                         <div>
-                            <span>Descrição:</span>
-                            <span>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                                bla
-                                bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </span>
+                            <span>Estado:</span>
+                            <span>{{$p->estado}}</span>
                         </div>
                     </div>
                 </div>
+                @endforeach
 
-                <div class="produto-registrado">
-                    <div class="img-prod">
-                        <a href=""><img src="images/gabinete.jpg" alt="" class="foto-produto"></a>
-                    </div>
-
-                    <div class="dados-produto">
-
-                        <div>
-                            <span>Produto:</span>
-                            <span>Gabinete</span>
-                        </div>
-                        <div>
-                            <span>Quantidade:</span>
-                            <span>5</span>
-                        </div>
-
-                        <div>
-                            <span>Descrição:</span>
-                            <span>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                                bla
-                                bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="produto-registrado">
-                    <div class="img-prod">
-                        <a href=""><img src="images/gabinete.jpg" alt="" class="foto-produto"></a>
-                    </div>
-
-                    <div class="dados-produto">
-
-                        <div>
-                            <span>Produto:</span>
-                            <span>Gabinete</span>
-                        </div>
-                        <div>
-                            <span>Quantidade:</span>
-                            <span>5</span>
-                        </div>
-
-                        <div>
-                            <span>Descrição:</span>
-                            <span>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                                bla
-                                bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="produto-registrado">
-                    <div class="img-prod">
-                        <a href=""><img src="images/gabinete.jpg" alt="" class="foto-produto"></a>
-                    </div>
-
-                    <div class="dados-produto">
-
-                        <div>
-                            <span>Produto:</span>
-                            <span>Gabinete</span>
-                        </div>
-                        <div>
-                            <span>Quantidade:</span>
-                            <span>5</span>
-                        </div>
-
-                        <div>
-                            <span>Descrição:</span>
-                            <span>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                                bla
-                                bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </span>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>

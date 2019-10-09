@@ -48,7 +48,7 @@
             <div id="produtos" class="col-xl-8 mx-auto">
 
                 <div class="add-produto">
-                    <a href="/cadastro_produto.html"><button type="button"
+                    <a href="/cadastro/pedido"><button type="button"
                     class="btn btn-success adicionar_prod">Adicionar mais um produto +</button></a>
                 </div>
                     <div class="dados-produto">

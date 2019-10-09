@@ -52,7 +52,7 @@
                                                 @foreach ($doadores as $doador)
                                                 <tr>
                                                     <td><a href="/perfil/{{$doador->id}}">{{$doador->nome}}</a></td>
-                                                    <td>{{$doador->email}}</td>
+                                                    <td><a href="mailto:{{$doador->email}}">{{$doador->email}}</a></td>
                                                     <td>
                                                         <form action="/perfil/{{$doador->id}}" method="post">
                                                             @method('delete')
@@ -91,7 +91,7 @@
                                                     @foreach ($receptores as $receptor)
                                                     <tr>
                                                         <td><a href="/perfil/{{$receptor->id}}">{{$receptor->nome}}</a></td>
-                                                        <td>{{$receptor->email}}</td>
+                                                        <td><a href="mailto:{{$receptor->email}}">{{$receptor->email}}</a></td>
                                                         <td>
                                                             <form action="/perfil/{{$receptor->id}}" method="post">
                                                                 @method('delete')
