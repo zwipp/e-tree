@@ -12,15 +12,15 @@
                         <fieldset class="CB">
                             <legend>O que você irá doar? </legend>
                             <div>
-                                <input type="radio" id="notebook" name="nome" valor="notebooks">
+                                <input type="radio" id="notebook" name="nome" value="notebook">
                                 <label for="coding">Notebooks</label>
                             </div>
                             <div>
-                                <input type="radio" id="desktop" name="nome" valor="desktop">
+                                <input type="radio" id="desktop" name="nome" value="desktop">
                                 <label for="music">Desktop</label>
                             </div>
                             <div>
-                                <input type="radio" id="monitor" name="nome" valor="monitors">
+                                <input type="radio" id="monitor" name="nome" value="monitor">
                                 <label for="music">Monitor</label>
                             </div>
                         </fieldset>
@@ -39,15 +39,15 @@
                         <fieldset class="CB">
                             <legend> Estado do produto </legend>
                             <div>
-                                <input type="radio" id="Novo" name="estado" valor="Novo">
+                                <input type="radio" id="Novo" name="estado" value="novo">
                                 <label for="coding"> Novo </label>
                             </div>
                             <div>
-                                <input type="radio" id="bom" name="estado" valor="bom">
+                                <input type="radio" id="bom" name="estado" value="bom">
                                 <label for="music"> Em bom estado </label>
                             </div>
                             <div>
-                                <input type="radio" id="analise" name="estado" valor="analise">
+                                <input type="radio" id="analise" name="estado" value="analise">
                                 <label for="music"> Precisa de uma análise </label>
                             </div>
                         </fieldset>

@@ -25,15 +25,11 @@ class Produto_controller extends Controller
         $produto->id_usuario=request('id_usuario');
 
         if (!empty(request('foto'))) {
-            // request('foto')->store('uploads');
-
-            $caminhoAbsoluto = public_path() . '/storage/uploads';
-            // $tamanho = request('foto')->getSize();
             $nomeArquivo = time() . '.' . request('foto')->extension();
             
             
-            request('foto')->move($caminhoAbsoluto, $nomeArquivo);
-            $usuario->foto = $nomeArquivo;
+            request('foto')->storeAs('\uploads', $nomeArquivo);
+            $produto->foto = $nomeArquivo;
         }
 
         $produto->save();
