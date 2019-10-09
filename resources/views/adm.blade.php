@@ -89,20 +89,17 @@
                                                 </thead>                                                
                                                 <tbody>
                                                     @foreach ($receptores as $receptor)
-                                                    {{-- @if ($usuario->tipo === 2) --}}
                                                     <tr>
-                                                        <td><a href="/perfil/{{$doador->id}}">{{$doador->nome}}</a></td>
-                                                        <td>{{$doador->email}}</td>
+                                                        <td><a href="/perfil/{{$receptor->id}}">{{$receptor->nome}}</a></td>
+                                                        <td>{{$receptor->email}}</td>
                                                         <td>
-                                                            <form action="/perfil/{{$doador->id}}" method="post">
+                                                            <form action="/perfil/{{$receptor->id}}" method="post">
                                                                 @method('delete')
                                                                 @csrf
                                                                 <button class="btn btn-success" type="submit">Excluir</button>
                                                             </form>
-                                                        </td>
-    
+                                                        </td>    
                                                     </tr>
-                                                    {{-- @endif                                          --}}
                                                     @endforeach
                                                 </tbody>
                                         </table>

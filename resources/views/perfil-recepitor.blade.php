@@ -49,8 +49,7 @@
 
                 <div class="add-produto">
                     <a href="/cadastro_produto.html"><button type="button"
-                            class="btn btn-success adicionar_prod">Adicionar mais um produto +</button></a>
-
+                    class="btn btn-success adicionar_prod">Adicionar mais um produto +</button></a>
                 </div>
                     <div class="dados-produto">
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Usuario;
 
 class home_controller extends Controller
 {
@@ -26,8 +27,12 @@ class home_controller extends Controller
         return view('login');
     }
 
-    public function perfil(){
-        return view('perfil-doar');
+    public function perfil($id){
+
+        $usuario = Usuario::find($id);
+
+        
+        return view('perfil-doar',compact('usuario'));
     }
 
     public function recepitor(){

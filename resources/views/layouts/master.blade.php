@@ -54,7 +54,7 @@
             <div class="row text-center pt-5" id="footer-infos">
                 <div class="col-sm-12 col-md-4 pt-3 footer-esquerdo">
                     <div class="footer-logo">
-                        <img src="images/logo_etree_v02.png" alt="">
+                        <img src="{{url('/images/logo_etree_v02.png')}}" alt="">
                         <!-- <img class="rounded-top" src="./images/beneficiarios.jpg" alt=""> -->
                     </div>
                     <div class="links-esquerdo pt-2">
