@@ -34,42 +34,52 @@
                                             aria-controls="collapseOnee">
                                             <p>Doadores</p>
                                         </button>
-                                    <p class="btn btn-outline-success">{{count($usuarios)}}</p>
+                                    <p class="btn btn-outline-success">{{count($doadores)}}</p>
                                     </h2>
                                 </div>
                                 <div id="collapseOnee" class="collapse" aria-labelledby="headingOne"
                                     data-parent="#accordionExample">
                                     <div class="card-body">
-                                        <ul class="novos-cadastros">
-                                            @foreach ($usuarios as $usuario)  
-                                            @if ($usuario->tipo === 3)                                                
-                                            <li class="">
-                                                <a href="">{{$usuario->nome}}</a>
-                                                <p>{{$usuario->email}}</p>
-                                            </li>
-                                            <hr>
-                                            @endif                                            
-                                            @endforeach
-                                        </ul>
+                                        <table class="table table-striped novo-usuario">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Usuário</th>
+                                                    <th scope="col">email</th>
+                                                    <th scope="col">ações</th>
+                                                </tr>
+                                            </thead>                                                
+                                            <tbody>
+                                                @foreach ($doadores as $doador)
+                                                <tr>
+                                                    <td><a href="/perfil/{{$doador->id}}">{{$doador->nome}}</a></td>
+                                                    <td>{{$doador->email}}</td>
+                                                    <td>
+                                                        <form action="/perfil/{{$doador->id}}" method="post">
+                                                            @method('delete')
+                                                            @csrf
+                                                            <button class="btn btn-success" type="submit">Excluir</button>
+                                                        </form>
+                                                    </td>
+                                                </tr>
+                                                @endforeach
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="card-entidade card-header" id="headingTwo">
                                     <h2 class="mb-0">
-                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                                            data-target="#collapseTwoo" aria-expanded="false"
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwoo" aria-expanded="false"
                                             aria-controls="collapseTwoo">
                                             <p>Instituições</p>
                                         </button>
-                                    <p class="btn btn-outline-success">{{count($usuarios)}}</p>
+                                    <p class="btn btn-outline-success">{{count($receptores)}}</p>
                                     </h2>
                                 </div>
-                                <div id="collapseTwoo" class="collapse" aria-labelledby="headingTwo"
-                                    data-parent="#accordionExample">
+                                <div id="collapseTwoo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                                     <div class="card-body">
-                                        @if ($usuario->tipo === 2)
-                                            <table class="table table-striped novo-usuario">
+                                        <table class="table table-striped novo-usuario">
                                                 <thead>
                                                     <tr>
                                                         <th scope="col">Usuário</th>
@@ -78,21 +88,24 @@
                                                     </tr>
                                                 </thead>                                                
                                                 <tbody>
-                                                    @foreach ($usuarios as $usuario)
+                                                    @foreach ($receptores as $receptor)
+                                                    {{-- @if ($usuario->tipo === 2) --}}
                                                     <tr>
-                                                        <td><a href="/perfil/receptor">{{$usuario->nome}}</a></td>
-                                                        <td>{{$usuario->email}}</td>
+                                                        <td><a href="/perfil/{{$doador->id}}">{{$doador->nome}}</a></td>
+                                                        <td>{{$doador->email}}</td>
                                                         <td>
-                                                        {{-- <form action="/perfil/receptor/{id}" method="post">
-                                                            @method('delete')
-                                                            @csrf
-                                                            <button type="submit" class="btn badge badge-danger">Remover</button>
-                                                        </td> --}}
+                                                            <form action="/perfil/{{$doador->id}}" method="post">
+                                                                @method('delete')
+                                                                @csrf
+                                                                <button class="btn btn-success" type="submit">Excluir</button>
+                                                            </form>
+                                                        </td>
+    
                                                     </tr>
+                                                    {{-- @endif                                          --}}
                                                     @endforeach
                                                 </tbody>
-                                            </table>
-                                        @endif                                           
+                                        </table>
                                     </div>
                                 </div>
                             </div>

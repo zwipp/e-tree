@@ -13,18 +13,20 @@ class Adm_controller extends Controller
         return view('adm');
     }
 
-    public function visualizarUsuario(){
+    public function visualizarUsuarios(){
 
-        $usuarios = Usuario::all();
+        $doadores = Usuario::where('tipo','2')->get();
 
-        return view('adm',compact('usuarios'));
+        $receptores = Usuario::where('tipo','3')->get();
+        
+        return view('adm',compact('doadores','receptores'));
     }
-    // public function delete($id){
+    public function delete($id){
 
-    //     $usuario = Usuario::find($id);
+        $usuario = Usuario::find($id);
 
-    //     $usuario->delete();
+        $usuario->delete();
 
-    //     return redirect('/adm');
-    // }
+        return redirect('/adm');
+    }
 }
