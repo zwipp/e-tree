@@ -23,6 +23,6 @@ class Pedido_controller extends Controller
 
         $pedido->save();
 
-        return redirect('/perfil/receptor/{id}');
+        return redirect('/perfil/receptor/' . request('id_usuario'));
     }
 }
