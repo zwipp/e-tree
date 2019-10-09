@@ -15,7 +15,7 @@ class CreatePedidos extends Migration
     {
         Schema::create('pedidos', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->enum('nome', ['notbook', 'desktop','monitor']);
+            $table->enum('nome', ['notebook', 'desktop','monitor']);
             $table->bigInteger('qnt');
             $table->timestamps();
         });
