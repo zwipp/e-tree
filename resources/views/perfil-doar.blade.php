@@ -14,9 +14,10 @@
                 <div class="dados-doador">
 
                     <div>
-                        <span>Nome:</span>
+                        <span>Nome: </span>
                         <span>{{$usuario->nome}}</span>
                     </div>
+
                     <div>
                         <span>Email: </span>
                         <span>{{$usuario->email}}</span>

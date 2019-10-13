@@ -15,12 +15,20 @@ class home_controller extends Controller
         return view('doador');
     }
 
+    public function cadastroDoador(){
+        return view('cadastro_doador');
+    }
+
     public function home(){
         return view('home');
     }
 
     public function instituicao(){
         return view('instituicoes');
+    }
+
+    public function cadastroInstituicao(){
+        return view('cadastro_instituicao');
     }
 
     public function login(){

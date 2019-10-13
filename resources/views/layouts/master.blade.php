@@ -37,6 +37,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{url('/instituicoes')}}">Instituições</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url('/cadastro/doador')}}">Cadastro doador</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url('/cadastro/instituicao')}}">Cadastro Instituição</a>
+                    </li>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{url('/login')}}">Login</a>
