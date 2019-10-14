@@ -10,37 +10,31 @@
             <div id="perfil" class="col-xl-4 mx-auto">
 
                 <div class="doador">
-                    <img src={{url('images/pose-para-fotos-de-perfil.jpg')}} alt="" class="foto-perfil">
+                    <img src="{{url('/storage/uploads/'.$usuario->foto)}}" alt="" class="foto-perfil">
                 </div>
                 
                 <div class="dados-doador">
 
                     <div>
-                        <span>Nome: </span>
-                        <span>Sofia</span>
+                        <span>Nome:</span>
+                        <span>{{$usuario->nome}}</span>
                     </div>
-
-                    <div>
-                        <span>Empresa: </span>
-                        <span>Terabyte</span>
-                    </div>
-
                     <div>
                         <span>Email: </span>
-                        <a href="">fernandodias@hotmail.com</a>
+                        <span>{{$usuario->email}}</span>
                     </div>
 
                     <div>
                         <span>telefone: </span>
-                        <a href="">(19) 985563685</a>
+                        <span>{{$usuario->telefone}}</span>
                     </div>
                     <div>
-                        <span>Local: </span>
-                        <a href="">R. Zézin N:41 asdasdasdasdas</a>
+                        <span>CPF: </span>
+                        <span>{{$usuario->cpf}}</span>
                     </div>
                     <div>
                         <span>CEP: </span>
-                        <a href="">456789123</a>
+                        <span>{{$usuario->cep}}</span>
                     </div>
                 </div>
             </div>

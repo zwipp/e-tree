@@ -34,7 +34,7 @@ class Produto_controller extends Controller
 
         $produto->save();
 
-        return redirect('/perfil');
+        return redirect('/perfil/' . request('id_usuario'));
 
 
 
