@@ -6,22 +6,22 @@
     <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active" data-interval="10000">
-          <img src=" {{url('images/arte_home1.jpg')}} " class="d-block w-100" alt="...">
+          <img src="{{url('images/criancas-1-1440x653-estilizada.jpg')}}" class="d-block w-100" alt="...">
           <div class="carousel-caption d-none d-md-block">
             <h6>TRABALHAMOS PELA INCLUSÃO DIGITAL</h6>
             <p></p>
             <p>O seu equipamento antigo, <br> terá um enorme valor em outras mãos.</p>
-            <button type="button" class="btn btn-secondary btn-lg">Saiba mais</button>
-            <button type="button" class="btn btn-primary btn-lg">Seja um doador!</button>
+            <a href="doador"><button type="button" class="btn btn-secondary btn-lg">Saiba mais</button></a>
+            <a href="doador"><button type="button" class="btn btn-primary btn-lg">Seja um doador!</button></a>
           </div>
         </div>
         <div class="carousel-item" data-interval="5000">
-          <img src=" {{url('images/criancas-1-1440x653-estilizada.jpg')}} " class="d-block w-100" alt="...">
+          <img src="{{url('images/arte_home1.jpg')}}" class="d-block w-100" alt="...">
           <div class="carousel-caption d-none d-md-block">
             <h6>PARTICIPE DESTA REVOLUÇÃO</h6>
             <p>Milhares de pessoas <br>podem ser impactadas com a sua ajuda.</p>
-            <button type="button" class="btn btn-secondary btn-lg">Saiba mais</button>
-            <button type="button" class="btn btn-primary btn-lg">Seja um doador!</button>
+            <a href="doador"><button type="button" class="btn btn-secondary btn-lg">Saiba mais</button></a>
+            <a href="doador"><button type="button" class="btn btn-primary btn-lg">Seja um doador!</button></a>
           </div>
         </div>
         <div class="carousel-item">
@@ -29,8 +29,8 @@
           <div class="carousel-caption d-none d-md-block">
             <h6>DOE SEU COMPUTADOR USADO</h6>
             <p>Não jogue no lixo, <br>O que pode ser o futuro para outras pessoas.</p>
-            <button type="button" class="btn btn-secondary btn-lg">Saiba mais</button>
-            <button type="button" class="btn btn-primary btn-lg">Seja um doador!</button>
+            <a href="doador"><button type="button" class="btn btn-secondary btn-lg">Saiba mais</button></a>
+            <a href="doador"><button type="button" class="btn btn-primary btn-lg">Seja um doador!</button></a>
           </div>
         </div>
       </div>

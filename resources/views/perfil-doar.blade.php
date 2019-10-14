@@ -9,14 +9,15 @@
         <div class="row col-xl-12 mx-auto" id="corpo">
             <div id="perfil" class="col-xl-4 mx-auto">
                 <div class="doador">
-                    <img src="{{url('/storage/uploads/'.$usuario->foto)}}" alt="" class="foto-perfil">
+                    <img src="{{url('/storage/uploads/'. $usuario->foto)}}" alt="" class="foto-perfil">
                 </div>
                 <div class="dados-doador">
 
                     <div>
-                        <span>Nome:</span>
+                        <span>Nome: </span>
                         <span>{{$usuario->nome}}</span>
                     </div>
+
                     <div>
                         <span>Email: </span>
                         <span>{{$usuario->email}}</span>
