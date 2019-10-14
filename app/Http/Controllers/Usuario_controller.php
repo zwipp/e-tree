@@ -47,10 +47,14 @@ class Usuario_controller extends Controller
 
         if($usuario->tipo == 2){
 
-            return redirect('/perfil/' . $usuario->id);
+            return redirect('/perfil/doador' . $usuario->id);
+        }
+
+        if ($usuario->tipo == 3) {
+            return redirect('/perfil/receptor' . $usuario->id);
         }
         
-        return redirect('/perfil/receptor/' . $usuario->id);
+        
 
 
     }

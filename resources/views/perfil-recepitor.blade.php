@@ -8,29 +8,45 @@
     <div class="container" id="cadastro_produtos">
         <div class="row col-xl-12 mx-auto" id="corpo">
             <div id="perfil" class="col-xl-4 mx-auto">
-
                 <div class="doador">
                     <img src="{{url('/storage/uploads/'.$usuario->foto)}}" alt="" class="foto-perfil">
                 </div>
-                
                 <div class="dados-doador">
 
                     <div>
+<<<<<<< HEAD
                         <span>Nome:</span>
                         <span>{{$usuario->nome}}</span>
                     </div>
                     <div>
                         <span>Email: </span>
                         <span>{{$usuario->email}}</span>
+=======
+                        <span>Nome: </span>
+                        <span>{{$usuario->nome}}</span>
+                    </div>
+
+                    <div>
+                        <span>Email: </span>
+                        <a href="">{{$usuario->email}}</a>
+>>>>>>> 0c85748b14fd22f015c16d909b33ab71bbf6325f
                     </div>
 
                     <div>
                         <span>telefone: </span>
+<<<<<<< HEAD
                         <span>{{$usuario->telefone}}</span>
                     </div>
                     <div>
                         <span>CPF: </span>
                         <span>{{$usuario->cpf}}</span>
+=======
+                        <a href="">{{$usuario->telefone}}</a>
+                    </div>
+                    <div>
+                        <span>CPF: </span>
+                        <a href="">{{$usuario->cpf}}</a>
+>>>>>>> 0c85748b14fd22f015c16d909b33ab71bbf6325f
                     </div>
                     <div>
                         <span>CEP: </span>

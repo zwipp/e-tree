@@ -6,6 +6,21 @@
 
 /* =====HEADER===== */
 
+#cadastro-doador{
+    background-color: white;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    border-radius: 15px;
+}
+
+#cor-botao{
+    background-color: #04b95a;
+}
+
+header{
+    background-color: white;
+}
+
 header a {
     color: gray;
 }
