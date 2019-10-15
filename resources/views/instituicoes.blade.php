@@ -64,7 +64,7 @@
     </div>
 
     <div class="row col-xl-8 mx-auto pt-4" id="cadastro_doador">
-        <form action="/criar/usuario" method="post" enctype="multipart/form-data" >
+        <form action="/register" method="post" enctype="multipart/form-data" >
             @csrf
             <input type="hidden" name="tipo" value="3">
             <div class="row">

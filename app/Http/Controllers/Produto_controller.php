@@ -34,11 +34,8 @@ class Produto_controller extends Controller
 
         $produto->save();
 
-<<<<<<< HEAD
+        
         return redirect('/perfil/doador/' . request('id_usuario'));
-=======
-        return redirect('/perfil/' . request('id_usuario'));
->>>>>>> 52c654ce3a1a08ae4bae9467032e6bb95f10fb8a
 
 
 

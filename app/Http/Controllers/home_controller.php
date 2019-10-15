@@ -49,8 +49,13 @@ class home_controller extends Controller
         return view('recepitor');
     }
 
-    public function perfilreceptor(){
-        return view('perfil-recepitor');
+    public function perfilreceptor($id){
+        $usuario = Usuario::find($id);
+
+        if(!$usuario) return redirect('/adm');
+
+        
+        return view('perfil-recepitor',compact('usuario'));
     }
 
     public function pedidoproduto(){

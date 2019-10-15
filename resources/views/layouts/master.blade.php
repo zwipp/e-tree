@@ -43,10 +43,23 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{url('/cadastro/instituicao')}}">Cadastro Instituição</a>
                     </li>
+
+                    @guest
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url('/login/mostrar')}}">Login</a>
+                    </li>
+                    @else
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{Auth::user()->tipo == 2 ? url('/perfil/doador/' . Auth::user()->id) : url('/perfil/receptor/' . Auth::user()->id)}}">Perfil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url('/login')}}">Login</a>
+                        <form action="/logout" method="POST">
+                            @csrf
+                            <button class="btn btn-outline-success">Sair</button>
+                        </form>
+                        
                     </li>
+                    @endguest
                 </ul>
             </nav>
         </div>

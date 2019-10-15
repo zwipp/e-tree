@@ -17,6 +17,8 @@ class CreatePedidos extends Migration
             $table->bigIncrements('id');
             $table->enum('nome', ['notebook', 'desktop','monitor']);
             $table->bigInteger('qnt');
+            $table->unsignedBigInteger('id_usuario');
+            $table->foreign('id_usuario')->references('id')->on('usuarios');
             $table->timestamps();
         });
     }

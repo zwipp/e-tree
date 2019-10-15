@@ -18,7 +18,7 @@ class CreateUsuarios extends Migration
             $table->string('nome');
             $table->bigInteger('tipo');
             $table->string('email')->unique();
-            $table->string('senha');
+            $table->string('password');
             $table->string('cidade');
             $table->string('estado');
             $table->bigInteger('cep');

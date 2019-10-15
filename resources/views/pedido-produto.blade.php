@@ -10,6 +10,7 @@
                     <div>
                         <fieldset class="CB">
                             <legend>O que você deseja? </legend>
+                            <input type="hidden" name="id_usuario" value="{{Auth::user()->id}} ">
                             <div>
                                 <input type="radio" id="notebook" name="nome" value="notebook">
                                 <label for="coding">Notebooks</label>

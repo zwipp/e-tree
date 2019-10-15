@@ -11,16 +11,7 @@ class Usuario_controller extends Controller
 
         request()->validate([
 
-            'nome'=>'required',
-            'senha'=>'required|min:5',
-            'tipo'=>'required|numeric',
-            'email'=>'required|email|unique:usuarios',
-            'cidade'=>'required',
-            'estado'=>'required',
-            'cep'=>'required|min:8',
-            'cpf'=>'required|min:11',
-            'telefone'=>'required'
-
+            
         ]);
 
         $usuario = new Usuario();
@@ -28,7 +19,7 @@ class Usuario_controller extends Controller
         $usuario->nome=request('nome');
         $usuario->tipo=request('tipo');
         $usuario->email=request('email');
-        $usuario->senha=request('senha');
+        $usuario->password=request('senha');
         $usuario->cidade=request('cidade');
         $usuario->estado=request('estado');
         $usuario->cep=request('cep');

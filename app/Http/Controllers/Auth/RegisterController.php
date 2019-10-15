@@ -28,7 +28,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -49,9 +49,16 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'nome'=>['required'],
+            'senha'=>['required','min:5'],
+            'tipo'=>['required','numeric'],
+            'email'=>['required','email','unique:usuarios'],
+            'cidade'=>['required'],
+            'estado'=>['required'],
+            'cep'=>['required','min:8'],
+            'cpf'=>['required','min:11'],
+            'telefone'=>['required']
+
         ]);
     }
 
@@ -63,10 +70,29 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-        ]);
+
+        $usuario = new User();
+
+        $usuario->nome=$data['nome'];
+        $usuario->tipo=$data['tipo'];
+        $usuario->email=$data['email'];
+        $usuario->password=Hash::make ($data['senha']);
+        $usuario->cidade=$data['cidade'];
+        $usuario->estado=$data['estado'];
+        $usuario->cep=$data['cep'];
+        $usuario->cpf=$data['cpf'];
+        $usuario->telefone=$data['telefone'];
+
+        if (!empty($data['foto'])) {
+            $nomeArquivo = time() . '.' . $data['foto']->extension();
+            
+            
+            $data['foto']->storeAs('\uploads', $nomeArquivo);
+            $usuario->foto = $nomeArquivo;
+        }
+
+        $usuario->save();
+
+        return $usuario;
     }
 }
