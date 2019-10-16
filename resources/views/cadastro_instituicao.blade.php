@@ -3,8 +3,7 @@
 
 <div class="row col-xl-8 mx-auto d-flex justify-content-center" id="cadastro-doador" style="text-align: center;">
     <h1 class="pt-4">Cadastre-se como uma instituição!</h1>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, cupiditate minus tenetur pariatur minima libero provident temporibus corporis animi, vitae autem nihil accusantium velit non totam. Deleniti aperiam autem nisi?</p>
-    <form  class="text-left" action="/register" method="post" enctype="multipart/form-data" >
+    <form  class="text-left mt-3" action="/register" method="post" enctype="multipart/form-data" >
         @csrf
         <input type="hidden" name="tipo" value="3">
         <div class="row">
@@ -27,6 +26,7 @@
         <div class="row">
             <div class="form-group col-sm-12 col-md-6">
                 <label for="exampleInputPassword1">Senha</label>
+                <small class="text-muted">mínimo 5 caracteres</small>
                 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="******" name="senha" value="{{old('senha')}}">
                 @error('senha')
                 <span class="text-danger">{{$message}} </span>

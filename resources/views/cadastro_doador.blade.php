@@ -3,7 +3,6 @@
 
 <div class="row col-xl-8 mx-auto d-flex justify-content-center" id="cadastro-doador" style="text-align: center;">
     <h1 class="pt-4">Cadastre-se como um doador!</h1>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, cupiditate minus tenetur pariatur minima libero provident temporibus corporis animi, vitae autem nihil accusantium velit non totam. Deleniti aperiam autem nisi?</p>
     <form  class="text-left" action="/register" method="post" enctype="multipart/form-data" >
         @csrf
         <input type="hidden" name="tipo" value="2">
@@ -27,6 +26,7 @@
         <div class="row">
             <div class="form-group col-sm-12 col-md-6">
                 <label for="exampleInputPassword1">Senha</label>
+                <small class="text-muted">mínimo 5 caracteres</small>
                 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="******" name="senha" value="{{old('senha')}}">
                 @error('senha')
                 <span class="text-danger">{{$message}} </span>
@@ -50,7 +50,7 @@
             </div>
             <div class="form-group col-sm-12 col-md-6">
                 <label for="validationTooltip05">CEP</label>
-                <input type="text" class="form-control" name="cep" value="{{old('cep')}}">
+                <input type="text" class="form-control" id="cep" name="cep" value="{{old('cep')}}">
                 @error('telefone')
                 <span class="text-danger">{{$message}} </span>
                 @enderror   
@@ -59,14 +59,14 @@
         <div class="row">
             <div class="form-group col-sm-12 col-md-5">
                 <label for="validationTooltip03">Cidade</label>
-                <input type="text" class="form-control" id="validationTooltip03"  name="cidade" value="{{old('cidade')}}">
+                <input type="text" readonly class="form-control" id="cidade"  name="cidade" value="{{old('cidade')}}">
                 @error('cidade')
                 <span class="text-danger">{{$message}} </span>
                 @enderror    
             </div>
             <div class="form-group col-sm-12 col-md-2">
                 <label for="validationTooltip04">Estado</label>
-                <input type="text" class="form-control" id="validationTooltip04"  name="estado" value="{{old('estado')}}">
+                <input type="text" readonly class="form-control" id="uf"  name="estado" value="{{old('estado')}}">
                 <div class="invalid-tooltip">
                 </div>
                 @error('estado')
@@ -98,6 +98,10 @@
         </div>
     </form>
     </div>
+
+@section('script')
+<script src="{{url("js/cep.js")}}"></script>
+@endsection
 
 <style>
     body{
