@@ -52,7 +52,18 @@
                     </li>
                     @else
                     <li class="nav-item">
-                        <a class="nav-link" href="{{Auth::user()->tipo == 2 ? url('/perfil/doador/' . Auth::user()->id) : Auth::user()->tipo == 3 ? url('/perfil/receptor/' . Auth::user()->id) : url('/adm')}}"> {{Auth::user()->tipo == 1 ? 'Dashboard' : 'Perfil' }} </a>
+                        @if(Auth::user()->tipo == 2)
+                        <a href="{{url('/perfil/doador/' . Auth::user()->id)}}" class="nav-link">Perfil</a>
+                        @endif
+
+                        @if(Auth::user()->tipo == 3)
+                        <a href="{{url('/perfil/receptor/' . Auth::user()->id)}}" class="nav-link">Perfil</a>
+                        @endif
+
+                        @if(Auth::user()->tipo == 1)
+                        <a href="{{url('/adm')}}" class="nav-link">Dashboard</a>
+                        @endif
+
                     </li>
                     <li class="nav-item">
                         <form action="/logout" method="POST">

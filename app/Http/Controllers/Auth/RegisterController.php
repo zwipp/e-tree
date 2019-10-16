@@ -56,7 +56,7 @@ class RegisterController extends Controller
             'cidade'=>['required'],
             'estado'=>['required'],
             'cep'=>['required','min:8'],
-            'cpf'=>['required','min:11'],
+            'cpf'=>['required','min:11', 'unique:usuarios'],
             'telefone'=>['required']
 
         ]);

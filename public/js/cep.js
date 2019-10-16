@@ -16,7 +16,6 @@ const buscaCep = (evt) => {
     .then((dados) => {
     cidadeInput.value = dados.localidade;
     ufInput.value = dados.uf;
-    cepInput.value = dados.cep;
     })
 }
 
