@@ -37,20 +37,22 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{url('/instituicoes')}}">Instituições</a>
                     </li>
+
+                    @guest
                     <li class="nav-item">
                         <a class="nav-link" href="{{url('/cadastro/doador')}}">Cadastro doador</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{url('/cadastro/instituicao')}}">Cadastro Instituição</a>
                     </li>
-
+                    @endguest
                     @guest
                     <li class="nav-item">
                         <a class="nav-link" href="{{url('/login/mostrar')}}">Login</a>
                     </li>
                     @else
                     <li class="nav-item">
-                        <a class="nav-link" href="{{Auth::user()->tipo == 2 ? url('/perfil/doador/' . Auth::user()->id) : url('/perfil/receptor/' . Auth::user()->id)}}">Perfil</a>
+                        <a class="nav-link" href="{{Auth::user()->tipo == 2 ? url('/perfil/doador/' . Auth::user()->id) : Auth::user()->tipo == 3 ? url('/perfil/receptor/' . Auth::user()->id) : url('/adm')}}"> {{Auth::user()->tipo == 1 ? 'Dashboard' : 'Perfil' }} </a>
                     </li>
                     <li class="nav-item">
                         <form action="/logout" method="POST">

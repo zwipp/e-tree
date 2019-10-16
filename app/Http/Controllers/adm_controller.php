@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Usuario;
+use App\Pedido;
+use App\Produto;
+use App\Estoque;
 
 
 class Adm_controller extends Controller
@@ -19,7 +22,13 @@ class Adm_controller extends Controller
 
         $receptores = Usuario::where('tipo','3')->get();
         
-        return view('adm',compact('doadores','receptores'));
+        $pedidos =  Pedido::all();
+
+        $qntDesktops = Estoque::where('nome','desktop')->first()->qnt;
+        $qntNotebooks = Estoque::where('nome','notebook')->first()->qnt;
+        $qntMonitor = Estoque::where('nome','monitor')->first()->qnt;
+
+        return view('adm',compact('doadores','receptores','pedidos','qntNotebooks','qntDesktops','qntMonitor'));
     }
     public function delete($id){
 

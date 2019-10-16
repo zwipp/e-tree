@@ -24,7 +24,7 @@ class CreateUsuarios extends Migration
             $table->bigInteger('cep');
             $table->bigInteger('cpf')->unique();
             $table->bigInteger('telefone')->unique();
-            $table->string('foto')->default('padrao.png');
+            $table->string('foto')->default('images/fotopadrao.jpg');
             $table->timestamps();
         });
     }

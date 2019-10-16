@@ -19,8 +19,8 @@ class CreateProdutos extends Migration
             $table->bigInteger('qnt');
             $table->enum('estado', ['novo', 'bom','analise']);
             $table->unsignedBigInteger('id_usuario');
-            $table->foreign('id_usuario')->references('id')->on('usuarios');
-            $table->string('foto');
+            $table->foreign('id_usuario')->references('id')->on('usuarios')->onDelete('cascade');
+            $table->string('foto')->default('images/fotoprodutos.jpg');;
             $table->timestamps();
         });
     }

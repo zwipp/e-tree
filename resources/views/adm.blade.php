@@ -10,13 +10,11 @@
                 <div class="col-md-3 col-sm-12 py-3 adm-sidebar">
                     <div class="sidebar-links list-group-flush border">
                         <div class="card-header">
-                            <h4>Ferramentas</h4>
+                            <h4>Estoque</h4>
                         </div>
-                        <a href="" class="list-group-item list-group-item-action bg-light">Link</a>
-                        <a href="" class="list-group-item list-group-item-action bg-light">Link</a>
-                        <a href="" class="list-group-item list-group-item-action bg-light">Link</a>
-                        <a href="" class="list-group-item list-group-item-action bg-light">Link</a>
-                        <a href="" class="list-group-item list-group-item-action bg-light">Link</a>
+                        <span class="list-group-item list-group-item-action bg-light">Notebooks: {{$qntNotebooks}}</span>
+                        <span class="list-group-item list-group-item-action bg-light">Desktops: {{$qntDesktops}}</span>
+                        <span class="list-group-item list-group-item-action bg-light">Monitores: {{$qntMonitor}}</span>
                     </div>
                 </div>
                 <!-- PAINEL -->
@@ -51,13 +49,13 @@
                                             <tbody>
                                                 @foreach ($doadores as $doador)
                                                 <tr>
-                                                    <td><a href="/perfil/{{$doador->id}}">{{$doador->nome}}</a></td>
+                                                    <td><a href="/perfil/doador/{{$doador->id}}">{{$doador->nome}}</a></td>
                                                     <td><a href="mailto:{{$doador->email}}">{{$doador->email}}</a></td>
                                                     <td>
                                                         <form action="/perfil/{{$doador->id}}" method="post">
                                                             @method('delete')
                                                             @csrf
-                                                            <button class="btn btn-success" type="submit">Excluir</button>
+                                                            <button class="btn btn-danger text-white" type="submit">Excluir</button>
                                                         </form>
                                                     </td>
                                                 </tr>
@@ -90,13 +88,13 @@
                                                 <tbody>
                                                     @foreach ($receptores as $receptor)
                                                     <tr>
-                                                        <td><a href="/perfil/{{$receptor->id}}">{{$receptor->nome}}</a></td>
+                                                        <td><a href="/perfil/receptor/{{$receptor->id}}">{{$receptor->nome}}</a></td>
                                                         <td><a href="mailto:{{$receptor->email}}">{{$receptor->email}}</a></td>
                                                         <td>
                                                             <form action="/perfil/{{$receptor->id}}" method="post">
                                                                 @method('delete')
                                                                 @csrf
-                                                                <button class="btn btn-success" type="submit">Excluir</button>
+                                                                <button class="btn btn-danger text-white" type="submit">Excluir</button>
                                                             </form>
                                                         </td>    
                                                     </tr>
@@ -111,34 +109,56 @@
                     <div class="accordion pt-3" id="accordionExample">
                         <div class="card-dashboard">
                             <div class="card-header">
-                                <h4>Equipamentos disponíveis</h4>
+                                <h4>Pedidos</h4>
                             </div>
                             <div class="card">
                                 <div class="card-entidade card-header" id="headingOne">
                                     <h2 class="mb-0">
                                         <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
                                             data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            <p> Doadores x Instituições</p>
+                                            <p> Pendentes</p>
                                         </button>
-                                        <p class="btn btn-outline-success btn-rounded">5</p>
+                                        <p class="btn btn-outline-success btn-rounded"> {{count($pedidos)}} </p>
                                     </h2>
                                 </div>
 
                                 <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
                                     data-parent="#accordionExample">
                                     <div class="card-body">
-                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-                                        richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
-                                        brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-                                        sunt
-                                        aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch
-                                        et.
-                                        Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
-                                        sapiente
-                                        ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-                                        farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of
-                                        them
-                                        accusamus labore sustainable VHS.
+                                        <table class="table table-striped novo-usuario">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Usuário</th>
+                                                    <th scope="col">Quantidade</th>
+                                                    <th scope="col">ações</th>
+                                                </tr>
+                                            </thead>                                                
+                                            <tbody>
+                                                @foreach ($pedidos as $p)
+                                                <tr>
+                                                    <td>{{$p->nome}}</td>
+                                                    <td>{{$p->qnt}}</td>
+                                                    <td>
+                                                        <form action="/baixa/estoque" method="post">
+                                                            @csrf
+                                                            <input type="hidden" name="nome" value="{{$p->nome}}">
+                                                            <input type="hidden" name="qnt" value=" {{$p->qnt}} ">
+                                                            <input type="hidden" name="id" value=" {{$p->id}} ">
+                                                            <button 
+                                                            class="btn btn-success text-white" 
+                                                            type="submit" 
+                                                            {{$p->nome == "notebook" && $p->qnt > $qntNotebooks ? "disabled":'' }} 
+                                                            {{$p->nome == "desktop" && $p->qnt > $qntDesktops ? "disabled":'' }}
+                                                            {{$p->nome == "monitor" && $p->qnt > $qntMonitor ? "disabled":'' }}
+                                                            >Finalizar</button>
+
+
+                                                        </form>
+                                                    </td>
+                                                </tr>
+                                                @endforeach
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>

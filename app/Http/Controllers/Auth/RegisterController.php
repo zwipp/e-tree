@@ -88,7 +88,7 @@ class RegisterController extends Controller
             
             
             $data['foto']->storeAs('\uploads', $nomeArquivo);
-            $usuario->foto = $nomeArquivo;
+            $usuario->foto = 'storage/uploads/' . $nomeArquivo;
         }
 
         $usuario->save();
