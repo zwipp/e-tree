@@ -1,11 +1,11 @@
-/* body {
+html, body{
+    font-family: sans-serif;
+    font-size: 17px;
+}
 
-    background-color: #f9f9f9;
-    margin: 0 auto;
-} */
-
-/* =====HEADER===== */
-
+.img-doador, .img-instituicao{
+    width: 200px;
+}
 #cadastro-doador{
     background-color: white;
     margin-top: 35px;
