@@ -2,9 +2,9 @@
 @section('body')
 
         <h3 class="text-center my-4">O que é ser um Doador</h3>   
-        <div class="row col-8 mx-auto">
-            <img class="col-6" src="images/doador.jpg" alt="" width="100%">
-            <p class="col-6 text-justify">Ser um doador nos dias de hoje é levar as pessoas ao futuro, 
+        <div class="row col-xl-8 mx-auto">
+            <img class="col-12 col-md-6 img-doador" src="images/doador.jpg" alt="" width="100%">
+            <p class="col-12 col-md-6 text-justify">Ser um doador nos dias de hoje é levar as pessoas ao futuro, 
                 você doar seu computador, notebook, e tablet velho e a gente faz esses computadores, notebooks e tablets chegarem nas mãos de comunidades carentes
                 ser um doador de eletrônicos com a gente e saber que seu aparelho terá um destino certo, e ajudará muita gente.
                 venha com a gente nessa jornada, ajude quem precisa, ajuda nessa inclusão social endo todos terão a oportunidade de ingressar nessa fase atual do mundo.
@@ -38,17 +38,11 @@
 
     @endsection
 
+    <style>      
+    p  {
+        text-indent: 1.5em;
+        margin-top: 0 }
+    </style>
 
-    @section('script')
-    <script>
-        function aparece_cadastro(evt) {
-            let cadastro = document.getElementById('cadastro_doador');
-            cadastro.style.display = "block";
-        }
 
-        let bt = document.getElementById('participe');
-        bt.addEventListener('click', aparece_cadastro);
-
-    </script>
-    @endsection
 
