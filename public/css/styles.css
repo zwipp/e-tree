@@ -147,7 +147,7 @@ object-fit: cover;
     margin-bottom: 90px;
     color: gray;
     background-color: #f9f9f9;
-    border-radius: 10px;
+    border-radius: 5px;
     border: 1px solid;
     border-color: grey;
 
@@ -161,7 +161,7 @@ object-fit: cover;
 }
 
 .campos-form input{
-    border-radius: 200px;
+    border-radius: 5px;
 }
 
 .boxLogin form .form-check{
@@ -171,7 +171,7 @@ object-fit: cover;
 }
 
 .btn.btn-success.btn_entrar{
-    border-radius: 40px !important;
+    border-radius: 5px !important;
 }
     
 
@@ -570,11 +570,12 @@ footer a {
     justify-content: space-around;
     padding-top: 30px;
 
+
 }
 
 #footer-contatos a {
     text-decoration: none;
-    color: #6b655e;
+    color: #fff;
 }
 
 #footer-contatos a i {
