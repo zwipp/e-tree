@@ -75,19 +75,19 @@
       <div class="card">
         <img src=" {{url('images/lixo-eletronico-1.jpg')}} " class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title text-success">Voluntários</h5>
-          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. impedit iste molestias et sunt
+          <h5 class="card-title text-success">Doadores</h5>
+          <p class="card-text">Nossos Doadores tem o orgulho de fazer parte dessa nova era, Nos ajudando nessa nova jornada.
           </p>
         </div>
         <div class="card-footer">
-          <small class="text-muted">30 mil computadores doados</small>
+          <small class="text-muted">1 mil computadores doados</small>
         </div>
       </div>
       <div class="card">
         <img src=" {{url('images/criancas-2.jpg')}} " class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title text-success">Doadores</h5>
-          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. impedit iste molestias et sunt
+          <h5 class="card-title text-success">Instituições</h5>
+          <p class="card-text">Muito das instituições já receberam os seus pedidos e já estão a usar seus computadores
           </p>
         </div>
         <div class="card-footer">
@@ -98,7 +98,7 @@
         <img src=" {{url('images/criancas-3.jpg')}} " class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title text-success">Beneficiados</h5>
-          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. impedit iste molestias et sunt
+          <p class="card-text">
           </p>
         </div>
         <div class="card-footer">
@@ -109,7 +109,7 @@
   </div>
 
   <div class="divisoria2 d-flex">
-    <h3>Conheça os <a href="doador.html">doadores</a></h3>
+    <h3>Conheça os <a href="/doador">doadores</a></h3>
   </div>
 
 @endsection

@@ -25,7 +25,7 @@
         <!-- LOGO -->
         <div class="row">
             <div class="col-sm-12 col-md-2 text-center">
-                <a class="navbar-brand" href="{{url('/home')}}">
+                <a class="navbar-brand" href="{{url('/')}}">
                     <img id="logo" src=" {{url('/images/logo_etree_v02.png')}} " alt="logo etree">
                 </a>
             </div>
@@ -79,15 +79,14 @@
                         <!-- <img class="rounded-top" src="./images/beneficiarios.jpg" alt=""> -->
                     </div>
                     <div class="links-esquerdo pt-2">
-                        <a href="#">Quem somos</a>
-                        <a href="#">Blog</a>
-                        <a href="#">Voluntários</a>
-                        <a href="#">Instituições</a>
-                        <a href="#">Faq</a>
+                        <a href="{{url('/')}}">Quem somos</a>
+                        <a href="{{url('/doador')}}">Doadores</a>
+                        <a href="{{url('/instituicoes')}}">Instituições</a>
+                        
                     </div>
                 </div>
                 <div class="campanhas col-sm-12 col-md-4 pt-3">
-                    <h5>Campanhas</h5>
+                    <h5>Atividades</h5>
                     <div>
                         <ul>
                             <li class="nav-item">
@@ -99,12 +98,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Quem somos</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Quem somos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Quem somos</a>
-                            </li>
+                         
                         </ul>
                     </div>
                 </div>
@@ -129,22 +123,23 @@
             <div id="footer-contatos">
                 <div class="row">
                     <div class="btn-contatos col-sm-12 col-md-4">
-                        <a class="btn btn-link" href="#" role="button">
-                            <i class="fa fa-envelope"></i>
+                        <a class="btn btn-link" href="mailto:usuario@ibi.com" role="button">
+                            <i class="fa fa-envelope"></i><p>etree@etree.com</p>
                         </a>
-                        <p>etree@etree.com</p>
+                        
                     </div>
                     <div class="btn-contatos col-sm-12 col-md-4">
-                        <a class="btn btn-link" href="#" role="button">
+                        <a class="btn btn-link" href="https://goo.gl/maps/wvnQvG85XESiJdAa7" role="button">
                             <i class="fa fa-map-marker"></i>
+                            <p>Nossa Localização</p>
                         </a>
-                        <p>Estamos sempre perto</p>
                     </div>
+
                     <div class="btn-contatos col-sm-12 col-md-4">
                         <a class="btn btn-link" href="#" role="button">
                             <i class="fa fa-phone"></i>
+                            <p>(11) 95555-5555</p>
                         </a>
-                        <p>(11) 95555-5555</p>
                     </div>
                 </div>
             </div>
