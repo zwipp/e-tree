@@ -109,7 +109,7 @@
   </div>
 
   <div class="divisoria2 d-flex">
-    <h3>Conheça os <a href="doador.html">doadores</a></h3>
+    <h3>Conheça os <a href="/doador">doadores</a></h3>
   </div>
 
 @endsection
