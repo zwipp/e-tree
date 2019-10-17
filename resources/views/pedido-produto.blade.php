@@ -13,15 +13,15 @@
                             <input type="hidden" name="id_usuario" value="{{Auth::user()->id}} ">
                             <div>
                                 <input type="radio" id="notebook" name="nome" value="notebook">
-                                <label for="coding">Notebooks</label>
+                                <label for="notebook">Notebooks</label>
                             </div>
                             <div>
                                 <input type="radio" id="desktop" name="nome" value="desktop">
-                                <label for="music">Desktop</label>
+                                <label for="desktop">Desktop</label>
                             </div>
                             <div>
                                 <input type="radio" id="monitor" name="nome" value="monitor">
-                                <label for="music">Monitor</label>
+                                <label for="monitor">Monitor</label>
                             </div>
                         </fieldset>
                     </div>
@@ -30,7 +30,7 @@
                         <input type="number" id="quantidade" class="form-goup form-control" class="qnt" name="qnt">
                     </div>
                     <div class="enviar mb-2">
-                        <button type="submit" class="btn btn-success adicionar_prod">Enviar</button>
+                        <button type="submit" class="col-12 col-md-6 btn btn-success adicionar_prod mt-1">Enviar</button>
                     </div>
                 </div>
 

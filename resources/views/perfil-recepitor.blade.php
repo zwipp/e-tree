@@ -40,8 +40,9 @@
             <div id="produtos" class="col-xl-8 mx-auto">
 
                 <div class="add-produto">
-                    <a href="/cadastro/pedido"><button type="button"
-                    class="btn btn-success adicionar_prod">Adicionar mais um produto +</button></a>
+                    <a href="/cadastro/pedido">
+                        <button type="button" class="btn btn-success adicionar_prod">Adicionar produto +</button>
+                    </a>
                 </div>
                     <div class="dados-produto">
 
@@ -49,7 +50,7 @@
 
                             <div class="produto-registrado">
                                 <div>
-                                    <span>Produto: </span>
+                                    <span>Produto:</span>
                                     <span> {{$p->nome}} </span>
                                 </div>
                                 <div>

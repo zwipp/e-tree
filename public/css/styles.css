@@ -257,21 +257,22 @@ object-fit: cover;
 
 .corpor{
     /* margin-top: 50px; */
+
     display: flex;
     flex-direction: row;
-    background-color: #f9f9f9;
+    background-color: #f2fff100;
     padding: 15px;
 }
 
 .dados{
     display: flex;
     flex-direction: column;
-    background-color: aliceblue;
-    border-radius: 25px;
+    background-color: #f1fff0ed;
+    border-radius: 8px;
 }
 
 .enviar{
-    background-color: #f9f9f9;
+    background-color: #f1fff003;
     display: flex;
     justify-content: center;
     padding: 10px;
@@ -294,12 +295,14 @@ object-fit: cover;
 
 .img-produto{
     width: 100%;
+    height: 100%;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
 }
 
 .colocar-img{
     margin: auto;
+    margin-bottom: 0 !important;
 }
 
 @media (max-width: 960px){
@@ -328,10 +331,12 @@ object-fit: cover;
 
 #corpo{
     background-color: white;
+    padding-left: 0px;
 }
 
 .dados-doador{
     margin-top: 25px;
+    width: 100%;
 }
 
 .dados-doador div{
@@ -349,12 +354,18 @@ object-fit: cover;
 
 .produto-registrado{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     height: auto;
     margin-bottom: 15px;
     border-radius: 5px;
     padding: 10px;
     background-color:#bbdfb5;
+}
+.col-produto{
+    width: 75px;
+}
+.col-pedido{
+    width: 220px;
 }
 
 .dados-produto{
@@ -372,20 +383,28 @@ object-fit: cover;
 }
 
 .foto-perfil{
-    width: 100%;
+    width: 50%;
+    height: 160px;
     border-radius: 50%;
     border: 1px solid black;
+    object-fit: cover;
 }
 
 .add-produto{
     margin-bottom: 15px;
 }
-
-.adicionar_prod{
-    background-color: #46c965;
-    border-radius: 50px;
+.add-produto a{
+    text-decoration: none;
 }
 
+.adicionar_prod{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #46c965;
+
+}
 .dados-doador div a{
     word-wrap: break-word;
     color: blue;
@@ -400,7 +419,11 @@ object-fit: cover;
 @media (max-width: 1200px){
     .foto-perfil{
         width: 50%;
-        text-align: center;
+        height: 160px;
+        border-radius: 50%;
+        border: 1px solid black;
+        object-fit: cover;
+    }
     }
 
     #perfil{
@@ -414,8 +437,8 @@ object-fit: cover;
     }
 
     #perfil div{
-        flex-direction: column;
-        align-items: center;
+        /* flex-direction: column;
+        align-items: center; */
     }
 
     .doador{
@@ -440,9 +463,9 @@ object-fit: cover;
         width: 100%;
     }
     
-    .produto-registrado{
+    /* .produto-registrado{
         flex-direction: column;
-    }
+    } */
 
     .dados-doador{
         display: flex;
@@ -450,8 +473,10 @@ object-fit: cover;
     }
 
     .doador{
-        text-align: center;
-    }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }    
 } 
 
 

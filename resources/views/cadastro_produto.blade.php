@@ -61,7 +61,7 @@
                     <div class="campo-imagem">
                         <img src=" {{url('images/suaimg.jpg')}} " alt="" class="img-produto">
                     </div>
-                    <div class="input-group mb-3 colocar-img">
+                    <div class="input-group colocar-img">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
                         </div>
@@ -74,7 +74,7 @@
                 </div>
             </div>
             <div class="enviar mb-2">
-                <button type="submit" class="btn btn-success adicionar_prod">Enviar</button>
+                <button type="submit" class="btn btn-success adicionar_prod col-5">Enviar</button>
             </div>
         </form>
     </section>

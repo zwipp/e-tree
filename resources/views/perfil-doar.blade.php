@@ -9,13 +9,13 @@
         <div class="row col-xl-12 mx-auto" id="corpo">
             <div id="perfil" class="col-xl-4 mx-auto">
                 <div class="doador">
-                    <img src="{{url($usuario->foto)}}" alt="" class="foto-perfil">
+                    <img class="foto-perfil" src="{{url($usuario->foto)}}" alt="" >
                 </div>
-                <div class="dados-doador">
+                <div class="dados-doador ">
 
                     <div>
-                        <span>Nome: </span>
-                        <span>{{$usuario->nome}}</span>
+                        <span class="">Nome: {{$usuario->nome}} </span>
+                        {{-- <span>{{$usuario->nome}}</span> --}}
                     </div>
 
                     <div>
@@ -42,7 +42,7 @@
 
                 <div class="add-produto">
                     <a href="/cadastro/produto">
-                        <button type="button"class="btn btn-success adicionar_prod">Adicionar mais um produto +</button>
+                        <button type="button"class="btn btn-success adicionar_prod">Adicionar produto +</button>
                     </a>
 
                 </div>
