@@ -52,11 +52,9 @@
                     
                 <div class="produto-registrado">
                     <div class="img-prod">
-                    <a href=""><img src="{{url($p->foto)}}" alt="" class="foto-produto"></a>
+                     <a href=""><img src="{{url($p->foto)}}" alt="" class="foto-produto"></a>
                     </div>
-
                     <div class="dados-produto">
-
                         <div>
                             <span>Produto:</span>
                             <span>{{$p->nome}}</span>

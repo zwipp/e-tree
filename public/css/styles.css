@@ -354,7 +354,7 @@ object-fit: cover;
 
 .produto-registrado{
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     height: auto;
     margin-bottom: 15px;
     border-radius: 5px;
